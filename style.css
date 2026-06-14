@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding-top:50px;
+    background: linear-gradient(-45deg,#4f46e5,#7c3aed,#06b6d4,#2563eb);
+    background-size:400% 400%;
+    animation:fundo 12s ease infinite;
+}
+
+@keyframes fundo{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+.container{
+    width:650px;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.insere-tarefa{
+    display:flex;
+    gap:10px;
+}
+
+.insere-tarefa input{
+    flex:1;
+    height:50px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    padding:10px;
+    font-size:16px;
+}
+
+.insere-tarefa input:focus{
+    outline:none;
+    border-color:#4f46e5;
+}
+
+.insere-tarefa button{
+    width:55px;
+    border:none;
+    border-radius:10px;
+    background:#4f46e5;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.insere-tarefa button:hover{
+    transform:scale(1.08);
+}
+
+#display{
+    margin-top:20px;
+}
+
+.tarefa{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+    padding:15px;
+    background:#f5f5f5;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.tarefa:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.texto{
+    font-size:18px;
+}
+
+.concluida .texto{
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+.botoes{
+    display:flex;
+    gap:6px;
+}
+
+.botoes button{
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+}
+
+.done{
+    background:#22c55e;
+}
+
+.edit{
+    background:#3b82f6;
+}
+
+.delete{
+    background:#ef4444;
+}
